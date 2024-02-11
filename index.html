@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="button-1.css">
+</head>
+<body>
+    <p class="text">Hi, Which one will you choose?</p>
+    <div class="head"></div>
+ 
+    <div class="wraper">
+        
+        <a href="#" class="green-button" onclick="showMessageAndRedirect()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Chill chill
+        </a>
+        <a href="#" class="blue-button" onclick="showMessageAndRedirect()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Music
+        </a>
+        <a href="#" class="yellow-button" onclick="showMessageAndRedirect()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Melody
+        </a>
+    </div>
+
+    <script>
+        function showMessageAndRedirect() {
+            // Show notifications
+            var message = document.createElement('div');
+            message.textContent = "Thật ra chọn nút nhấn nào cũng như nhau ạ ^^";
+            message.style.cssText = 'position: fixed; top: 10%; left: 50%; transform: translate(-50%, -50%); background-color: #111; color: white; padding: 20px; z-index: 9999;';
+            document.body.appendChild(message);
+    
+            // Redirect after a while
+            setTimeout(function() {
+                window.location.replace("http://127.0.0.1:5500/Music/index.html"); 
+            }, 3500); 
+        }
+    </script>
+</body>
+</html>
